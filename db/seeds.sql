@@ -1,5 +1,5 @@
   
-USE burgers_db;
+USE burgersDB;
 
 INSERT INTO burgers(burger_name, devoured)
 VALUES ("Zach Burger", true), ("Bacon Burger", true);
