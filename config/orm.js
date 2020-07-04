@@ -49,7 +49,6 @@ var orm = {
       }
       cb(result);
     });
-    console.log(query.sql);
   },
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
@@ -61,7 +60,6 @@ var orm = {
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
-    console.log(queryString);
 
     connection.query(queryString, vals, function(err, result) {
       if (err) {
@@ -80,7 +78,6 @@ var orm = {
     queryString += " WHERE ";
     queryString += condition;
 
-    console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
